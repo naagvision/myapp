@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Edit</title>
+    {%load staticfiles%}
+    <link rel="stylesheet" href="{% static '/style.css'%}"/>
+    <style>
+body {
+  background-color: lightblue;
+}
+
+
+
+h1 {
+  font-family: verdana;
+  font-size: 20px;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+<form method="POST" class="post-form" action="/update/{{employee.id}}">
+    {%csrf_token%}
+    <div class="container">
+        <br>
+        <div class="form-group row">
+        <label class="col-sm-1 col form-label"></label>
+            <div class="col-sm-4">
+                <h3>Update Details</h3>
+            </div>
+         </div>
+
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Employee Id: </label>
+            <div class="col-sm-4">
+                <input type="text" name="eid" id="id_eid" required maxlength="20" value="{{employee.eid}}"/>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Employee Card: </label>
+            <div class="col-sm-4">
+                <input type="text" name="ecard" id="id_ecard" required maxlength="20" value="{{employee.ecard}}"/>
+            </div>
+        </div>
+
+         <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Employee Farst Name: </label>
+            <div class="col-sm-4">
+                <input type="text" name="efname" id="id_efname" required maxlength="100" value="{{employee.efname}}"/>
+            </div>
+        </div>
+
+        <div class="form-group row">
+           <label class="col-sm-2 col-form-label">Employee Last Name: </label>
+           <div class="col-sm-4">
+               <input type="text" name="elname" id="id_elname" required maxlength="100" value="{{employee.elname}}"/>
+           </div>
+       </div>
+
+       <div class="form-group row">
+          <label class="col-sm-2 col-form-label">Employee Agency: </label>
+          <div class="col-sm-4">
+              <input type="text" name="eagency" id="id_eagency" required maxlength="100" value="{{employee.eagency}}"/>
+          </div>
+      </div>
+
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Employee Email: </label>
+            <div class="col-sm-4">
+                <input type="email" name="eemail" id="id_eemail" required maxlength="254" value="{{employee.eemail}}"/>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Employee Contact: </label>
+            <div class="col-sm-4">
+                <input type="text" name="econtact" id="id_econtact" required maxlength="15" value="{{employee.econtact}}"/>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label"></label>
+            <div class="col-sm-4">
+                <button type="submit" class="btn btn-success">Update</button>
+            </div>
+        </div>
+    </div>
+
+
+
+</form>
+
+</body>
+</html>

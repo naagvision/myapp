@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+  body {
+    margin: 70px;
+    font-family: Arial;
+    font-size:
+    }
+    form{
+      padding: 10px;
+      font-size: 17px;
+      border: 1px solid grey;
+      float: left;
+      width: 80%;
+      background: #f1f1f1;
+}
+</style>
+</head>
+<body>
+<h2>Fill employee details</h2>
+<div>
+      <form method="post" class="post-form" action="/create_view">
+        {% csrf_token %}
+  Card Number:<br>
+  <input type="text" card="card"  size="50">
+  <br>
+  Id:<br>
+  <input type="text" id="id"  size="50">
+<br>
+  First name:<br>
+  <input type="text" firstname="firstname"  size="50">
+  <br>
+  Last name:<br>
+  <input type="text" lastname="lastname"  size="50">
+  <br>
+  Agency:<br>
+  <input type="text" agency="agency"  size="50">
+  <br>
+  <br><br>
+  <input type="submit" value="Submit">
+</form>
+</div>
+<p></p>
+</body>
+</html>
